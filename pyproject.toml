@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "mt-holidays"
+version = "0.1.0"
+description = "Generator of a file with non-working days for MikroTik routers"
+authors = ["Alexey Vaganov <poofeg@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+typer = "^0.4.1"
+workalendar = "^16.3.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+mypy = "^0.960"
+
+[tool.poetry.scripts]
+mt-holidays = 'mt_holidays.main:app'
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
